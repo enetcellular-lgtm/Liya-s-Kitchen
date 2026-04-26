@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIYAS KITCHEN.lk | Delicious Home Cooking</title>
+    <style>
+        :root {
+            --primary-color: #606c38;
+            --secondary-color: #283618;
+            --accent-color: #dda15e;
+            --light-color: #fefae0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Logo */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            height: 80px;
+            width: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Slideshow Section */
+        #hero-section {
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            transition: background-image 1s ease-in-out;
+            position: relative;
+        }
+
+        /* අඳුරු ස්ථරයක් එකතු කිරීම (Overlay) */
+        #hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #bc6c25;
+            transform: scale(1.05);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            margin-top: 50px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 10px; font-size: 14px; }
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- මෙතනට ඔබේ logo එක හරියටම දාන්න -->
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqdgMvbBpsQXuv9UMMEixSRTo4Sljs1odlIRFXEj2AuUcLT92MMXVrxIPHpE-v-lhVnNk8Hy5nfL_telYHegoCmmoV6vDeEVQABwLi5lLhNlMUlvlMA9J9vMhqwfGOE1rHh1tXyZ_tjTE=w96-h97-n-k-no-nu" alt="Liya's Kitchen Logo">
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="https://www.google.com/maps/dir//Liya's+Kitchen,+Pottuvil+Road,+Lahugala+32512/@6.8475142,79.9528444,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae5a5007fa53679:0x4164ad29d945318f!2m2!1d81.7244625!2d6.8786678?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Location</a>
+</nav>
+
+<div id="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Liya's Kitchen</h1>
+        <p>ලංකාවේ රසට ගමේ කෑම වේලක්!</p>
+        <a href="tel:0715587178" class="btn">Call Now</a>
+    </div>
+</div>
+
+<footer>
+    <div class="contact-info">
+        <p><strong>Contact:</strong> 071 558 7178</p>
+        <p><strong>Address:</strong> Pottuvil Road, Lahugala 32512</p>
+        <p>© 2026 Liya's Kitchen - All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+    const images = [
+        'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFzY_HOec-tUrJgci8cdCHPHz11nwboeZgcZtDy1Z6-ibz0gx_pHLav6ZQ0dhUPQQhzrjA_T1_B29nOA0nQVCA_SETeRTmQxBLF3LFda0_V79AICF43polimrnIiQ4WcyrA49DqE6Wq2ss=s680-w680-h510-rw',
+        'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqdgMvbBpsQXuv9UMMEixSRTo4Sljs1odlIRFXEj2AuUcLT92MMXVrxIPHpE-v-lhVnNk8Hy5nfL_telYHegoCmmoV6vDeEVQABwLi5lLhNlMUlvlMA9J9vMhqwfGOE1rHh1tXyZ_tjTE=s680-w680-h510-rw', // උදාහරණ පින්තූරයක්
+        'https://lh3.googleusercontent.com/p/AF1QipMHEkz2Ep_uC9W2TXihHYSzI0ZFhkfrwZ4eNnd2=s680-w680-h510-rw'
+    ];
+
+    let index = 0;
+    const hero = document.getElementById('hero-section');
+
+    function changeHeroBG() {
+        hero.style.backgroundImage = `url('${images[index]}')`;
+        index = (index + 1) % images.length;
+    }
+
+    // තත්පර 5කට වරක් පින්තූරය මාරු වේ
+    setInterval(changeHeroBG, 5000);
+    changeHeroBG();
+</script>
+
+</body>
+</html>
